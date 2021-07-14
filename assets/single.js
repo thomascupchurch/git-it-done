@@ -1,3 +1,4 @@
+var repoNameEl = document.querySelector("#repo-name");
 var issueContainerEl = document.querySelector("#issues-container");
 var limitWarningEl = document.querySelector("#limit-warning");
 
@@ -41,7 +42,7 @@ var displayIssues = function(issues) {
         issueEl.setAttribute("href", issues[i].html_url);
         issueEl.setAttribute("target", "_blank");
         issueContainerEl.appendChild(issueEl);
-    }
+    
 
     // create span to hold issue title
     var titleEl = document.createElement("span");
@@ -62,6 +63,7 @@ var displayIssues = function(issues) {
 
     // append to container 
     issueEl.appendChild(typeEl);
+}
 };
 
 var displayWarning = function(repo) {
